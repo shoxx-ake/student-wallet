@@ -1,0 +1,167 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f4f7;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 32px;
+}
+
+.balance-card,
+.form,
+.transactions {
+    background: white;
+    border-radius: 18px;
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+.balance-card {
+    text-align: center;
+}
+
+.balance-card p {
+    color: #777;
+    font-size: 16px;
+}
+
+.balance-card h2 {
+    margin-top: 8px;
+    font-size: 32px;
+}
+
+.stats {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.stats > div {
+    background: white;
+    padding: 20px;
+    border-radius: 18px;
+    flex: 1;
+}
+
+.stats p {
+    margin-bottom: 7px;
+}
+
+.stats h3 {
+    font-size: 20px;
+}
+
+.income h3 {
+    color: #00a63c;
+}
+
+.expense h3 {
+    color: #ef1717;
+}
+
+.form h2,
+.transactions h2 {
+    margin-bottom: 18px;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    min-height: 52px;
+    padding: 14px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #777;
+}
+
+button {
+    background: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 16px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 16px;
+}
+
+/* 📱 Telefon */
+@media (max-width: 600px) {
+
+    body {
+        padding: 12px;
+    }
+
+    .container {
+        max-width: 100%;
+    }
+
+    h1 {
+        font-size: 26px;
+        margin-bottom: 18px;
+    }
+
+    .balance-card,
+    .form,
+    .transactions {
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .balance-card h2 {
+        font-size: 28px;
+    }
+
+    .stats {
+        gap: 10px;
+    }
+
+    .stats > div {
+        padding: 15px;
+    }
+
+    .stats h3 {
+        font-size: 17px;
+    }
+
+    li {
+        font-size: 15px;
+    }
+}

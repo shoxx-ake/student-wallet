@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Wallet</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>💰 Student Wallet</h1>
+
+        <div class="balance-card">
+            <p>Joriy balans</p>
+            <h2 id="balance">0 so'm</h2>
+        </div>
+
+        <div class="stats">
+
+            <div class="income">
+                <p>📈 Kirim</p>
+                <h3 id="income">0 so'm</h3>
+            </div>
+
+            <div class="expense">
+                <p>📉 Chiqim</p>
+                <h3 id="expense">0 so'm</h3>
+            </div>
+
+        </div>
+
+        <div class="form">
+
+            <h2>Tranzaksiya qo'shish</h2>
+
+            <input
+                type="text"
+                id="description"
+                placeholder="Masalan: Ovqat"
+            >
+
+            <input
+                type="number"
+                id="amount"
+                placeholder="Summa"
+            >
+
+            <select id="type">
+                <option value="income">Kirim</option>
+                <option value="expense">Chiqim</option>
+            </select>
+
+            <button onclick="addTransaction()">
+                Qo'shish
+            </button>
+
+        </div>
+
+        <div class="transactions">
+
+            <h2>Tranzaksiyalar</h2>
+
+            <ul id="transactionList"></ul>
+
+        </div>
+
+    </div>
+
+    <script src="javascript.js"></script>
+
+</body>
+</html>

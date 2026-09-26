@@ -16,15 +16,12 @@ function addTransaction() {
         type: type
     });
 
-    saveTransactions();
+    localStorage.setItem("transactions", JSON.stringify(transactions));
+
     updateWallet();
 
     document.getElementById("description").value = "";
     document.getElementById("amount").value = "";
-}
-
-function saveTransactions() {
-    localStorage.setItem("transactions", JSON.stringify(transactions));
 }
 
 function updateWallet() {
@@ -55,6 +52,7 @@ function updateWallet() {
 
 function showTransactions() {
     const list = document.getElementById("transactionList");
+
     list.innerHTML = "";
 
     for (const transaction of transactions) {
@@ -71,5 +69,4 @@ function showTransactions() {
     }
 }
 
-// Sahifa ochilganda saqlangan ma'lumotlarni chiqarish
 updateWallet();
